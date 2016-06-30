@@ -3,25 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Tiny Pokedex</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.red-orange.min.css" />
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body>
-    <div id="app">
-      <div class="nav">
-        <h1>Tiny Pokedex</h1>
-      </div>
-
-      <div class="poke-content">
-        <div>
-          {{message}}
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout__header-row">
         </div>
-        <input v-model="query" id="input-query"></input>
-        <button v-on:click = "getPokemon(query)">Click</button>
+    <div id="pokeApp">
+      <div class="poke-content">
+        <h2>Tiny Pokedex</h2>
       </div>
 
-      </div>
+        <!-- <div>
+          {{message}}
+        </div> -->
+
+
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+
+              <input v-model="query" id="input-query" class="mdl-textfield__input" >
+              <label class="mdl-textfield__label" for="sample3"> {{ message }} </label>
+
+              <button class="mdl-button mdl-js-button mdl-button--raised" v-on:click = "getPokemon(query)">Click</button>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/vue/dist/vue.min.js"></script>

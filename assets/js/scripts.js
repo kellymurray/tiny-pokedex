@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-var app = new Vue({
-  el: '#app',
+var pokeApp = new Vue({
+  el: '#pokeApp',
   data: {
-    message: 'Type in the name of a Pokemon',
+    message: 'Who you gonna catch?',
     query: '',
   },
   methods: {
