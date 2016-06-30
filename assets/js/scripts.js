@@ -1,3 +1,18 @@
+$(document).ready(function() {
+
+
+// $('.input-query').keyup(function() {
+//   $('input').val(function(i, val) {
+//     return val.toLowerCase();
+//     console.log(val);
+//   });
+// });
+
+// $('.input-query').keyup(function(){
+//   $(this).val($(this).val().toLowerCase());
+//
+// });
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -16,6 +31,8 @@ var app = new Vue({
       })
     }
   }
+});
+
 });
 
 // TESTING WITH AJAX BELOW
