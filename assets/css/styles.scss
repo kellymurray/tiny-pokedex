@@ -21,6 +21,10 @@ $primary-color: #F44336;
 
 }
 
+.poke-choice {
+  @include centerer;
+}
+
 .show {
   display: block;
 }

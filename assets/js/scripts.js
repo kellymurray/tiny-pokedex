@@ -16,6 +16,7 @@ var pokeApp = new Vue({
         method: 'GET',
       }).done(function(data) {
         pokeApp.$set("name", data.name);
+        pokeApp.$set("sprite", data.sprites)
       })
     }
   }
