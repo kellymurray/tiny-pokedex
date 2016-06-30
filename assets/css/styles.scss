@@ -1,0 +1,26 @@
+
+$primary-color: #F44336;
+
+h1 {
+  font-size: golden-ratio(14px,  1);
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.poke-content {
+  @include centerer;
+}
+
+.poke-button {
+  display: block;
+  border: none;
+  color: white;
+  margin-top: 25px;
+  background-color: $primary_color;
+
+}

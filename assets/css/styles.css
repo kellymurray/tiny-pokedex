@@ -1,3 +1,17 @@
+h1 {
+  font-size: golden-ratio(14px, 1); }
 
+.poke-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.poke-button {
+  display: block;
+  border: none;
+  color: white;
+  margin-top: 25px;
+  background-color: #F44336; }
 
 /*# sourceMappingURL=styles.css.map */
