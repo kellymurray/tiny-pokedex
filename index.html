@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tiny Pokedex</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav">
+        <h1>Tiny Pokedex</h1>
+      </div>
+
+      <div class="poke-content">
+        <div>
+          {{message}}
+        </div>
+        <input v-model="query"></input>
+        <button v-on:click = "getPokemon(query)">Click</button>
+      </div>
+
+      </div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/vue/dist/vue.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+  </body>
+</html>
