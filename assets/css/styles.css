@@ -1,7 +1,4 @@
-h1 {
-  font-size: golden-ratio(14px, 1); }
-
-.poke-content {
+.poke-search {
   position: absolute;
   top: 50%;
   left: 50%;
