@@ -12,22 +12,20 @@
   <body>
 
     <div id="pokeApp">
-        <section class="poke-search">
+        <section class="poke-search show">
             <h4>Tiny Pokedex</h4>
             <h2> {{ message }} </h2>
             <input v-model="query" input class="u-full-width" type="email" placeholder="enter your pokemon" id="exampleEmailInput input-query">
             <button class="poke-button" v-on:click = "getPokemon(query)">Click</button>
+            </section>
 
-            <div class="poke-output">
-              You chose {{ name }}, {{ location }}
+            <div class="poke-choice hide">
+              <h2>Gotta catch {{ name }}</h2>
 
-            </div>
-
-
-
-        </section>
+          </div>
 
 
+    </div>
 
 
 

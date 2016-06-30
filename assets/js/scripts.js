@@ -16,17 +16,19 @@ var pokeApp = new Vue({
         method: 'GET',
       }).done(function(data) {
         pokeApp.$set("name", data.name);
-        pokeApp.$set("location", data.location_area);
       })
     }
   }
 });
 
+$('.poke-button').on('click', function() {
+  $('.poke-choice').removeClass("hide").addClass("show");
 
+});
 
-
-
-
+$('.poke-button').on('click', function () {
+  $('.poke-search').fadeOut('slow');
+});
 
 
 
