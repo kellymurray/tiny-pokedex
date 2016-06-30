@@ -1,18 +1,5 @@
 $(document).ready(function() {
 
-
-// $('.input-query').keyup(function() {
-//   $('input').val(function(i, val) {
-//     return val.toLowerCase();
-//     console.log(val);
-//   });
-// });
-
-// $('.input-query').keyup(function(){
-//   $(this).val($(this).val().toLowerCase());
-//
-// });
-
 var app = new Vue({
   el: '#app',
   data: {
@@ -21,10 +8,11 @@ var app = new Vue({
   },
   methods: {
     getPokemon: function(query){
-      console.log(this.message);
+      var pokeQuery = query.toLowerCase();
+      console.log(this.query);
       $.ajax({
         dataType: 'json',
-        url: 'http://pokeapi.co/api/v2/pokemon/' + query,
+        url: 'http://pokeapi.co/api/v2/pokemon/' + pokeQuery,
         method: 'GET',
       }).done(function(data) {
         console.log(data);
