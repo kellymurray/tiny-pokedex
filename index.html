@@ -23,12 +23,13 @@
             <div class="poke-choice hide">
               <img v-if = "sprite != '' " src="{{ sprite | json }}" />
               <h2>Gotta catch<br />
-                {{ name }}</h2><br / />
+                {{ name  | capitalize}}</h2><br / />
           </div>
 
 
-    </div>
 
+
+</div>
 
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
