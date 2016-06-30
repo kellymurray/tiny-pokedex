@@ -21,10 +21,9 @@
             </section>
 
             <div class="poke-choice hide">
+              <img v-if = "sprite != '' " src="{{ sprite | json }}" />
               <h2>Gotta catch<br />
                 {{ name }}</h2><br / />
-                {{ sprite }}
-
           </div>
 
 

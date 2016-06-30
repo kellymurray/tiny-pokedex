@@ -17,7 +17,7 @@ var pokeApp = new Vue({
       }).done(function(data) {
         console.log(data.sprites);
         pokeApp.$set("name", data.name);
-        pokeApp.$set("sprite", data.sprites);
+        pokeApp.$set("sprite", data.sprites.front_default);
       })
     }
   }
