@@ -1,2 +1,2 @@
 # tiny-pokedex
-a tiny pokedex using the pokeapi
+a tiny pokedex using the pokeapi, vuejs, and skeleton

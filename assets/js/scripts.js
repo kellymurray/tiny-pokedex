@@ -15,20 +15,21 @@ var pokeApp = new Vue({
         url: 'http://pokeapi.co/api/v2/pokemon/' + pokeQuery,
         method: 'GET',
       }).done(function(data) {
+        console.log(data.sprites);
         pokeApp.$set("name", data.name);
-        pokeApp.$set("sprite", data.sprites)
+        pokeApp.$set("sprite", data.sprites);
       })
     }
   }
 });
 
 $('.poke-button').on('click', function() {
-  $('.poke-choice').removeClass("hide").addClass("show");
+  $('.poke-choice').removeClass("hide").addClass("show").fadeIn('fast');
 
 });
 
 $('.poke-button').on('click', function () {
-  $('.poke-search').fadeOut('slow');
+  $('.poke-search').fadeOut('fast');
 });
 
 
