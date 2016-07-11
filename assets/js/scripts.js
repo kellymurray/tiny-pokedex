@@ -5,7 +5,7 @@ var pokeApp = new Vue({
   el: '#pokeApp',
   data: {
     message: 'Gotta catch who?',
-    query: '',
+    query: ''
   },
   methods: {
     getPokemon: function(query){
@@ -19,6 +19,7 @@ var pokeApp = new Vue({
         pokeApp.$set("name", data.name);
         pokeApp.$set("sprite", data.sprites.front_default);
         pokeApp.$set("weight", data.weight);
+        $(".loadingIcon").toggle();
       })
     }
   }
