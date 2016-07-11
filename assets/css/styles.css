@@ -8,7 +8,7 @@
   display: block;
   border: none;
   color: white;
-  margin-top: 25px;
+  margin-top: 20px;
   background-color: #F44336; }
 
 .poke-choice {
@@ -22,5 +22,23 @@
 
 .hide {
   display: none; }
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+.rotating {
+  -webkit-animation: rotating 2s linear infinite; }
+
+.loadingIcon {
+  width: 100px; }
+
+.poke-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #F44336;
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
