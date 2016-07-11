@@ -14,6 +14,9 @@ var pokeApp = new Vue({
         dataType: 'json',
         url: 'http://pokeapi.co/api/v2/pokemon/' + pokeQuery,
         method: 'GET',
+        success: function(data, textStatus ){
+          alert('request successful');
+        },
       }).done(function(data) {
         console.log(data.weight);
         pokeApp.$set("name", data.name);
