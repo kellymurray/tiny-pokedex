@@ -5,7 +5,8 @@ var pokeApp = new Vue({
   el: '#pokeApp',
   data: {
     message: 'Gotta catch who?',
-    query: ''
+    query: '',
+    errorMessage: "Oops! A wild Pokemon didn't appear."
   },
   methods: {
     getPokemon: function(query){
@@ -20,7 +21,8 @@ var pokeApp = new Vue({
           pokeApp.$set("weight", data.weight);
         },
         error: function(data, textStatus){
-          console.log("something went wrong")
+          $(".errorMessage").show();
+          $(".loadingIcon").hide();
         }
       }).done(function(data) {
         $(".loadingIcon").hide();
