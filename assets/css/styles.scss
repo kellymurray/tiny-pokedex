@@ -11,12 +11,21 @@ $primary-color: #F44336;
   @include centerer;
 }
 
-.poke-button {
+.poke-button, .poke-button2 {
   display: block;
   border: none;
   color: white;
   margin-top: 20px;
   background-color: $primary_color;
+}
+
+.poke-white {
+  display: block;
+  border: none;
+  color: black;
+  margin-top: 20px;
+  border: solid 1px black;
+  background-color: white;
 }
 
 .poke-choice {
@@ -32,10 +41,10 @@ $primary-color: #F44336;
 }
 
 @-webkit-keyframes rotating {
-    from{
+    from {
         -webkit-transform: rotate(0deg);
     }
-    to{
+    to {
         -webkit-transform: rotate(360deg);
     }
 }

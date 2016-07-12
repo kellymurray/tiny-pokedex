@@ -22,10 +22,14 @@
 
         <div class="poke-choice hide">
           <img v-if = "sprite != '' " src="{{ sprite | json }}" />
-          <h2>Gotta catch<br />
-            {{ name  | capitalize}}</h2><br / />
-          <img class="loadingIcon rotateIcon rotating" src="assets/images/noun_497433.svg"></img>
-          <div class="errorMessage hide">{{ errorMessage }}</div>
+          <h2>Gotta catch<br/>
+            {{ name | capitalize}}</h2><br/>
+          <img class="loadingIcon rotating" src="assets/images/noun_497433.svg"></img>
+
+          <button class="poke-white">Add Pokemon</button>
+          <button class="poke-button2" v-on:click="clearQuery()">Catch again</button>
+
+          <h2 class="errorMessage hide">{{ errorMessage }}</h2>
         </div>
     </div>
 

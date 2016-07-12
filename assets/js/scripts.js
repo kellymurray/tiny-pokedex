@@ -11,6 +11,7 @@ var pokeApp = new Vue({
   methods: {
     getPokemon: function(query){
       var pokeQuery = query.toLowerCase();
+      $(".loadingIcon").show();
       $.ajax({
         dataType: 'json',
         url: 'http://pokeapi.co/api/v2/pokemon/' + pokeQuery,
@@ -18,7 +19,6 @@ var pokeApp = new Vue({
         success: function(data, textStatus ){
           pokeApp.$set("name", data.name);
           pokeApp.$set("sprite", data.sprites.front_default);
-          pokeApp.$set("weight", data.weight);
         },
         error: function(data, textStatus){
           $(".errorMessage").show();
@@ -27,13 +27,19 @@ var pokeApp = new Vue({
       }).done(function(data) {
         $(".loadingIcon").hide();
       })
+    },
+    clearQuery: function(){
+      pokeApp.$set("name", "");
+      pokeApp.$set("sprite", "");
+      pokeApp.$set("query", "");
+      $('.poke-choice').hide();
+      $('.poke-search').show();
     }
   }
 });
 
 $('.poke-button').on('click', function() {
   $('.poke-choice').removeClass("hide").addClass("show").fadeIn('fast');
-
 });
 
 $('.poke-button').on('click', function () {
