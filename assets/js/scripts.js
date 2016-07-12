@@ -15,14 +15,15 @@ var pokeApp = new Vue({
         url: 'http://pokeapi.co/api/v2/pokemon/' + pokeQuery,
         method: 'GET',
         success: function(data, textStatus ){
-          alert('request successful');
+          pokeApp.$set("name", data.name);
+          pokeApp.$set("sprite", data.sprites.front_default);
+          pokeApp.$set("weight", data.weight);
         },
+        error: function(data, textStatus){
+          console.log("something went wrong")
+        }
       }).done(function(data) {
-        console.log(data.weight);
-        pokeApp.$set("name", data.name);
-        pokeApp.$set("sprite", data.sprites.front_default);
-        pokeApp.$set("weight", data.weight);
-        $(".loadingIcon").toggle();
+        $(".loadingIcon").hide();
       })
     }
   }

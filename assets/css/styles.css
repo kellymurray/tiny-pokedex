@@ -29,7 +29,7 @@
   to {
     -webkit-transform: rotate(360deg); } }
 .rotating {
-  -webkit-animation: rotating 2s linear infinite; }
+  -webkit-animation: rotating 1s linear infinite; }
 
 .loadingIcon {
   width: 100px; }
