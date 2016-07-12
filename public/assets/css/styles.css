@@ -1,0 +1,52 @@
+.poke-search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.poke-button, .poke-button2 {
+  display: block;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  background-color: #F44336; }
+
+.poke-white {
+  display: block;
+  border: none;
+  color: black;
+  margin-top: 20px;
+  border: solid 1px black;
+  background-color: white; }
+
+.poke-choice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+.rotating {
+  -webkit-animation: rotating 1s linear infinite; }
+
+.loadingIcon {
+  width: 100px; }
+
+.poke-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #F44336;
+  width: 100%; }
+
+/*# sourceMappingURL=styles.css.map */

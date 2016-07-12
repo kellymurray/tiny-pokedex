@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tiny Pokedex</title>
+    <link rel="stylesheet" href="assets/css/skeleton/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/skeleton/css/skeleton.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+
+    <div id="pokeApp" v-cloak>
+        <section class="poke-search show">
+          <h4>Tiny Pokedex</h4>
+          <h2> {{ message }} </h2>
+          <input v-model="query" input class="u-full-width" type="email" placeholder="enter your pokemon" id="exampleEmailInput input-query">
+          <button class="poke-button" v-on:click = "getPokemon(query)">Click</button>
+        </section>
+
+        <div class="poke-choice hide">
+          <img v-if = "sprite != '' " src="{{ sprite | json }}" />
+          <h2>Gotta catch<br/>
+            {{ name | capitalize}}</h2><br/>
+          <img class="loadingIcon rotating" src="assets/images/noun_497433.svg"></img>
+
+          <button class="poke-white">Add Pokemon</button>
+          <button class="poke-button2" v-on:click="clearQuery()">Catch again</button>
+
+          <h2 class="errorMessage hide">{{ errorMessage }}</h2>
+        </div>
+    </div>
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/vue/dist/vue.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
