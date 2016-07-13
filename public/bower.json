@@ -1,0 +1,21 @@
+{
+  "name": "tiny-pokedex",
+  "homepage": "https://github.com/kellymurray/tiny-pokedex",
+  "authors": [
+    "Kelly Murray <kelly@theironyard.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "vue": "^1.0.26"
+  }
+}

@@ -14,7 +14,7 @@ var pokeApp = new Vue({
       $(".loadingIcon").show();
       $.ajax({
         dataType: 'json',
-        url: 'http://pokeapi.co/api/v2/pokemon/' + pokeQuery,
+        url: 'https://pokeapi.co/api/v2/pokemon/' + pokeQuery,
         method: 'GET',
         success: function(data, textStatus ){
           pokeApp.$set("name", data.name);
