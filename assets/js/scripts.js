@@ -46,6 +46,8 @@ $('.poke-button').on('click', function () {
   $('.poke-search').fadeOut('fast');
 });
 
-
+$('.add-poke').on('click', function() {
+  $('')
+});
 
 }); //end
