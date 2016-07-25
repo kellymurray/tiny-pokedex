@@ -46,8 +46,37 @@ $('.poke-button').on('click', function () {
   $('.poke-search').fadeOut('fast');
 });
 
+
+//local storage begins
+
+function SaveDataToLocalStorage(data){
+    var pokeArray
+    //is anything in localstorage?
+    if (localStorage.getItem('storage') === null) {
+        pokeArray = [];
+    } else {
+         // Parse the serialized data back into an array of objects
+         pokeArray = JSON.parse(localStorage.getItem('storage'));
+     }
+     // Push the new data (whether it be an object or anything else) onto the array
+     pokeArray.push(data);
+     // Alert the array value
+     console.log(pokeArray);  // Should be something like [Object array]
+     // Re-serialize the array back into a string and store it in localStorage
+     localStorage.removeItem('storage');
+     localStorage.setItem('storage', JSON.stringify(pokeArray));
+   };
+
+
+//store to local storage
+
 $('.add-poke').on('click', function() {
-  $('')
+  var pokeInfo = $("name").val();//grab pokemon info - WIP
+
+  SaveDataToLocalStorage(pokeInfo);
+  console.log(pokeInfo);
+
+  });
 });
 
-}); //end
+//end
