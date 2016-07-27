@@ -26,7 +26,7 @@
             {{ name | capitalize}}</h2><br/>
           <img class="loadingIcon rotating" src="assets/images/noun_497433.svg"></img>
 
-          <button class="poke-white">Add Pokemon</button>
+          <button class="poke-white" v-on:click=addPokemon(query)>Add Pokemon</button>
           <button class="poke-button2" v-on:click="clearQuery()">Catch again</button>
 
           <h2 class="errorMessage hide">{{ errorMessage }}</h2>

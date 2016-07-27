@@ -34,6 +34,10 @@ var pokeApp = new Vue({
       pokeApp.$set("query", "");
       $('.poke-choice').hide();
       $('.poke-search').show();
+      $('.errorMessage').hide();
+    },
+    addPokemon: function(pokemonName) {
+      console.log(pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1));
     }
   }
 });
